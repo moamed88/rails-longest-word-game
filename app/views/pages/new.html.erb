@@ -1,0 +1,12 @@
+<h1>Pages#new</h1>
+<p>New game</p>
+<div class="list-inline-item">
+<h2> <%= @letters.each { |x| puts x }.join("") %> </h2>
+</div>
+
+<form action="/score" method="get">
+   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="score" placeholder="Which word?">
+  <input type="submit">
+</form>
+
